@@ -25,7 +25,7 @@ The primary objective of this project is to analyze the electric vehicle market 
 - Python
 
 ## Data Used
-- <a href="https://github.com/SnehalDeepa/Electric_Vehicle_Market_analysis/blob/main/compressed_data.csv.gz"<Dataset</a>
+<a href="https://github.com/SnehalDeepa/Electric_Vehicle_Market_analysis/blob/main/compressed_data.csv.gz"<Dataset</a>
 
 ## SQL Schema
 
@@ -178,3 +178,11 @@ FROM electric_vehicle_data
 GROUP BY electric_utility
 ORDER BY utility_ev_count DESC;
 ```
+
+# Visualisation 
+
+## Power BI VIsualisation 
+
+### Dashboard li
+
+<a href="EV DASH.pbix">view Dashboard<a/>
