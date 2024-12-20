@@ -11,12 +11,13 @@ The Electric Vehicle Market Analysis project is a comprehensive exploration of t
 ## Objective
 
 The primary objective of this project is to analyze the electric vehicle market using data-driven methods to:
-- Identify Trends: Discover trends in EV adoption across countries and regions.
+- Identify Trends: Discover trends in EV adoption across country and regions.
 - Analyze Manufacturers: Examine the market share and performance of key EV manufacturers.
 - Ealuate Range & Pricing: Investigate relationships between electric range, MSRP, and vehicle type.
 - Support Sustainability: Provide insights into how the EV market aligns with global sustainability goals.
 - Showcase Skills: Demonstrate proficiency in SQL and Python for real-world data analysis projects.
-- The findings of this analysis are presented through clear and engaging visualizations, making the insights accessible to a wide audience.
+- The findings of this analysis are presented through clear and engaging visualizations, making the insights 
+  accessible to a wide audience.
 
 ## Tool Used
 
@@ -30,9 +31,12 @@ The primary objective of this project is to analyze the electric vehicle market 
 ## SQL Schema
 
 ### STEP_1) DATA LOADING
+
 ### Import the dataset into your SQL environment and perform basic data inspection to verify column types, check for NULLs, and identify potential issues with data quality.
 
+```sql
 SELECT * FROM electric_vehicle_data;
+```
 
 ### STEP_2) Answering Key Questions with SQL Queries
 ### Total vehicle count
