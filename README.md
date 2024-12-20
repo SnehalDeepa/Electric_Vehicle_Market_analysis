@@ -93,59 +93,88 @@ GROUP BY _2020_Census_Tract, legislative_district
 ORDER BY ev_count DESC;
 ```
 
---STEP_3)Popular EV Manufacturers and Models
---Top Manufacturers by EV Count
+### STEP_3)Popular EV Manufacturers and Models
+### Top Manufacturers by EV Count
 
+```sql
 SELECT Make, COUNT(DOL_Vehicle_ID) AS vehicle_count
 FROM electric_vehicle_data
 GROUP BY Make
 ORDER BY vehicle_count DESC;
+```
 
---Top Models by Region
+### Top Models by Region
 
+```sql
 SELECT county, Make, model, COUNT(DOL_Vehicle_ID) AS model_count
 FROM electric_vehicle_data
 GROUP BY county, Make, model
 ORDER BY model_count DESC;
+```
 
---STEP_4)Electric Range and Fuel Type Analysis
---Average Electric Range by Model
+### STEP_4)Electric Range and Fuel Type Analysis
+### Average Electric Range by Model
 
+```sql
 SELECT model, AVG(electric_range) AS avg_range
 FROM electric_vehicle_data
 GROUP BY model
 ORDER BY avg_range DESC;
+```
 
---Distribution by Clean Alternative Fuel Types
+### Distribution by Clean Alternative Fuel Types
 
+```sql
 SELECT Clean_Alternative_Fuel_Vehicle_CAFV_Eligibility, COUNT(DOL_Vehicle_ID) AS fuel_type_count
 FROM electric_vehicle_data
 GROUP BY Clean_Alternative_Fuel_Vehicle_CAFV_Eligibility
 ORDER BY fuel_type_count DESC;
+```
 
---STEP_5)Base MSRP Analysis
---Average MSRP by Manufacturer
+### STEP_5)Base MSRP Analysis
+### Average MSRP by Manufacturer
 
+```sql
 SELECT Make, AVG(base_msrp) AS avg_msrp
 FROM electric_vehicle_data
 GROUP BY Make
 ORDER BY avg_msrp DESC;
+```
 
---MSRP Distribution by County
+### MSRP Distribution by County
 
+```sql
 SELECT county, AVG(base_msrp) AS avg_msrp
 FROM electric_vehicle_data
 GROUP BY county
 ORDER BY avg_msrp DESC;
+```
 
---STEP_6)Trends by Model Year
---Count of Vehicles by Model Year
+### STEP_6)Trends by Model Year
+### Count of Vehicles by Model Year
 
+```sql
 SELECT model_year, COUNT(DOL_Vehicle_ID) AS yearly_count
 FROM electric_vehicle_data
 GROUP BY model_year
 ORDER BY model_year;
+```
 
---Average Electric Range Over Time
+### Average Electric Range Over Time
 
-SELECT model_year, AVG(electric_range) AS
+```sql
+SELECT model_year, AVG(electric_range) AS avg_range
+FROM electric_vehicle_data
+GROUP BY model_year
+ORDER BY model_year;
+```
+
+### STEP_7)Electric Utility Analysis
+### EVs by Electric Utility Provider
+
+```sql
+SELECT electric_utility, COUNT(DOL_Vehicle_ID) AS utility_ev_count
+FROM electric_vehicle_data
+GROUP BY electric_utility
+ORDER BY utility_ev_count DESC;
+```
