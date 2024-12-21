@@ -187,7 +187,7 @@ ORDER BY utility_ev_count DESC;
 
 ## Power BI VIsualisation 
 
-### Dashboard li
+### Dashboard
 
 <a href="EV DASH.pbix">view Dashboard<a/>
 
